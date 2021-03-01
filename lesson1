@@ -1,0 +1,72 @@
+package ru.geekbrains.lesson1;
+
+import java.util.Scanner;
+
+public class FirstApp {
+    public static void main(String[] args) {
+        byte b0 = 100;
+        short b1 = 250;
+        int b2 = 360;
+        long b3 = 3269871;
+
+        float f1 = 125.698f;
+        double f2 = 158.421;
+
+        boolean s1 = true;
+
+        char c1 = 'A';
+        System.out.println(c1 + b1);
+        System.out.println(calculate (1.5f, 3.6f, 5.5f, 14.6f));
+        System.out.println(task10and20(8,10));
+        System.out.println(isPositiveOrNegative(0));
+        System.out.println(isNegative (-5));
+        System.out.println(greetings ("Ольга"));
+        Scanner scanner = new Scanner(System.in);
+        int w = scanner.nextInt();
+        if (w%4==0 && w%100 !=0 || w%400==0) {
+            System.out.println("Високосный год");
+        } else {
+            System.out.println("Не високосный год");
+        }
+    }
+
+       public static float calculate (float a, float b, float c, float d) {
+        if (d==0f) {return 0}
+        float v = a * (b + (c / d));
+     return v;
+    }
+
+      public static boolean task10and20(int x1, int x2) {
+if ((x1+x2)>=10 && (x1+x2)<=20) {
+   return true;
+    } else
+{ return false;}
+}
+public static int isPositiveOrNegative (int y) {
+     if (y<0) {
+        System.out.println("Число отрицательное");
+    } else {
+        System.out.println("Число положительное");
+    }
+    return y;
+}
+
+    public static boolean isNegative (int z) {
+        if (z<0) {
+            return true;
+        } else
+        { return false;}
+    }
+
+    public static char greetings (String name) {
+        System.out.println("Привет, "+name + "!");
+
+        return 0;
+    }
+
+
+
+}
+
+
+
